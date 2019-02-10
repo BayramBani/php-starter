@@ -1,18 +1,17 @@
-<header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Starter</a>
+    <a class="navbar-brand" href="index.php">Starter</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarsExample07">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.php?page=home"> Home </a>
+        <li class="nav-item">
+          <a class="nav-link <?php if ($current_page == 'home'){echo 'active';} ?>" href="index.php?page=home"> Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php?page=about"> About </a>
+          <a class="nav-link <?php if ($menu == 'demo'){echo 'active';} ?>" href="index.php?page=demo"> Demo </a>
         </li>
       </ul>
       <form class="form-inline my-2 my-md-0">
@@ -24,7 +23,7 @@
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="index.php?page=profile">Profile <i class="fas fa-user"></i></a>
             <a class="dropdown-item" href="index.php?page=settings">Settings <i class="fas fa-cogs"></i></a>
-            <a class="dropdown-item" href="#">Logout <i class="fas fa-sign-out-alt"></i></a>
+            <a class="dropdown-item" href="index.php?page=login">Logout <i class="fas fa-sign-out-alt"></i></a>
           </div>
         </div>
       </form>

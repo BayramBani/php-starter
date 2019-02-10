@@ -1,0 +1,22 @@
+$(document).ready(function () {
+  $('#contact_form').on('submit', function (e) {
+    e.preventDefault();
+    $('#btn_submit').html('Sending ...');
+    console.log($('#contact_form').serialize());
+    $.ajax({
+      //url: './core/task/send_mail.php',
+      url: './core/task/send_mail_phpMailer.php',
+      type: 'POST',
+      data: $('#contact_form').serialize(),
+      success: function (data) {
+        $('#result').html(data);
+        $('#btn_submit').html('Send');
+      },
+      error: function (e) {
+        console.log(e);
+        $('#btn_submit').html('Send');
+      }
+    });
+
+  });
+});

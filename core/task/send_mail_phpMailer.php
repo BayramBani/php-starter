@@ -1,14 +1,10 @@
 <?php
 
-// Import PHPMailer classes into the global namespace
-// These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
 if (isset($_POST["email"])) {
-  //Load composer's autoloader
-  require realpath(__DIR__."/../../").'/vendor/autoload.php';
-
+  require realpath(__DIR__."/../../")."/vendor/autoload.php";
+  require_once realpath(__DIR__."/../")."/Config.php";
   $mail = new PHPMailer(true);// Passing `true` enables exceptions
   $task = 'contact';
   try {
@@ -27,22 +23,18 @@ if (isset($_POST["email"])) {
     $body .= "<tr><td colspan='2' style='border:none;'><strong>Message : </strong>{$message}</td></tr>";
     $body .= "</tbody></table>";
     $body .= "</body></html>";
-
-
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = SMTP_HOST;
     $mail->SMTPAuth = true;
-    $mail->Username = 'devbproject@gmail.com';
-    $mail->Password = 'Aezakmi@1989';
+    $mail->Username = SMTP_USER;
+    $mail->Password = SMTP_PASS;
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
-
     //Recipients
-    $mail->setFrom('devbproject@gmail.com', 'devb Project');
-    $mail->addAddress('bayram.bani@gmail.com', 'Web Master');
-    $mail->addAddress($email);               // Name is optional
-
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->setFrom(SMTP_USER);
+    $mail->addAddress(MAIL_TO);
+    $mail->addAddress($email);
+    $mail->isHTML(true);
     $mail->Subject = $subject;
     $mail->Body = $body;
 

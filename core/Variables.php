@@ -35,4 +35,12 @@ if ($current_page == "login") {
   $body_class = "bg-dark";
   $include_navbar = false;
 }
+if ($current_page == "login2") {
+  $body_class = "bg-dark";
+  $include_navbar = false;
+}
+if ($current_page == "register") {
+  $body_class = "bg-dark";
+  $include_navbar = false;
+}
 ?>

@@ -5,9 +5,10 @@ use PHPMailer\PHPMailer\Exception;
 if (isset($_POST["email"])) {
   require realpath(__DIR__."/../../")."/vendor/autoload.php";
   require_once realpath(__DIR__."/../")."/Config.php";
-  $mail = new PHPMailer(true);// Passing `true` enables exceptions
+  $mail = new PHPMailer(true);
   $task = 'contact';
   try {
+    $to = $_POST["to"];
     $name = $_POST["name"];
     $email = $_POST["email"];
     $message = $_POST["message"];
@@ -32,8 +33,8 @@ if (isset($_POST["email"])) {
     $mail->Port = 587;
     //Recipients
     $mail->setFrom(SMTP_USER);
-    $mail->addAddress(MAIL_TO);
-    $mail->addAddress($email);
+    $mail->addAddress($to);
+
     $mail->isHTML(true);
     $mail->Subject = $subject;
     $mail->Body = $body;

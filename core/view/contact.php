@@ -35,6 +35,7 @@
             <div id="result"></div>
           </div>
           <button type="submit" class="btn btn-primary" id="btn_submit">Send</button>
+          <button type="reset" class="btn btn-secondary" id="btn_reset">New</button>
         </form>
         </div>
       </div>

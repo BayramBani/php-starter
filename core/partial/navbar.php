@@ -23,7 +23,7 @@
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="index.php?page=profile">Profile <i class="fas fa-user"></i></a>
             <a class="dropdown-item" href="index.php?page=settings">Settings <i class="fas fa-cogs"></i></a>
-            <a class="dropdown-item" href="index.php?page=login">Logout <i class="fas fa-sign-out-alt"></i></a>
+            <a class="dropdown-item" href="./core/task/logout.php">Logout <i class="fas fa-sign-out-alt"></i></a>
           </div>
         </div>
       </form>

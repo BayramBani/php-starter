@@ -1,8 +1,10 @@
 $(document).ready(function () {
+  $('#btn_reset').on('click', function () {
+    $('#result').html('');
+  });
   $('#contact_form').on('submit', function (e) {
     e.preventDefault();
     $('#btn_submit').html('Sending ...');
-    console.log($('#contact_form').serialize());
     $.ajax({
       //url: './core/task/send_mail.php',
       url: './core/task/send_mail_phpMailer.php',

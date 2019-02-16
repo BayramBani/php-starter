@@ -1,6 +1,13 @@
 <?php
+session_start();
 $current_page = 'home';
-if (isset($_REQUEST['page'])) $current_page = $_REQUEST['page'];
+if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+  if (isset($_REQUEST['page']) && $_REQUEST['page'] == "register"){
+    $current_page = "register";
+  }else{
+    $current_page = 'login2';
+  }
+} elseif (isset($_REQUEST['page'])) $current_page = $_REQUEST['page'];
 $page = './core/view/' . $current_page . '.php';
 $menu = $current_page;
 if (isset($_REQUEST['menu'])) $menu = $_REQUEST['menu'];
@@ -15,19 +22,15 @@ require_once('core/Variables.php');
   <title>Starter</title>
   <?php echo $common_css; ?>
   <?php echo $css; ?>
-
 </head>
 <body class="<?php echo $body_class; ?>">
-
 <header>
   <?php
   if ($include_navbar) {
     include './core/partial/navbar.php';
   } ?>
 </header>
-
 <main>
-
   <?php
   if (file_exists($page)) {
     require_once($page);
@@ -36,14 +39,12 @@ require_once('core/Variables.php');
   }
   ?>
 </main>
-
 <footer class="bg-dark">
   <?php
   if ($include_footer) {
     include './core/partial/footer.php';
   } ?>
 </footer>
-
 <?php echo $common_js; ?>
 <?php echo $js; ?>
 </body>

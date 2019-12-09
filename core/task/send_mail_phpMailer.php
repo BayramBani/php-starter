@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 if (isset($_POST["email"])) {
   require realpath(__DIR__."/../../")."/vendor/autoload.php";
-  require_once realpath(__DIR__."/../")."/Config.php";
+  require_once __DIR__ . "/../";
   $mail = new PHPMailer(true);
   $task = 'contact';
   try {

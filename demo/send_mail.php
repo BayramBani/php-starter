@@ -10,7 +10,7 @@ $headers = "From: " . $from . "\r\n";
 $headers .= "Reply-To: " . $from . "\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Barastifood Afrika</title></head><body>";
+$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Test</title></head><body>";
 $body .= "<table style='width: 100%;'>";
 $body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
 $body .= "</td></tr></thead><tbody>";

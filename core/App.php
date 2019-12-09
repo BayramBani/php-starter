@@ -1,6 +1,6 @@
 <?php
 
-include dirname(__FILE__) . '/Config.php';
+include dirname(__FILE__) . '/config.php';
 
 class App
 {
@@ -25,6 +25,7 @@ class App
       "pass_msg" => "",
       "msg" => ""
     ];
+    $pass = "";
     if (empty(trim($username))) {
       $login["user_msg"] = "Please enter username.";
     } else {

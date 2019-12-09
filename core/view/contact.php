@@ -1,10 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-2 col-md-2 d-sm-none d-md-block">
-      <?php include realpath(__DIR__ . "/../") . '/partial/sidebar.php' ?>
-    </div>
-
-    <div class="col-lg-10 col-md-10 col-sm-12">
+    <div class="col-sm-12">
       <div class="card bg-light">
         <div class="card-body">
         <h1 class="display-4 text-center">Contact</h1>

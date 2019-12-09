@@ -1,17 +1,6 @@
 <?php
 session_start();
-$current_page = 'home';
-if (!isset($_SESSION['username']) || empty($_SESSION['username'])) {
-  if (isset($_REQUEST['page']) && $_REQUEST['page'] == "register"){
-    $current_page = "register";
-  }else{
-    $current_page = 'login2';
-  }
-} elseif (isset($_REQUEST['page'])) $current_page = $_REQUEST['page'];
-$page = './core/view/' . $current_page . '.php';
-$menu = $current_page;
-if (isset($_REQUEST['menu'])) $menu = $_REQUEST['menu'];
-require_once('core/Variables.php');
+require_once('core/var.php');
 ?>
 <!doctype html>
 <html lang="en">

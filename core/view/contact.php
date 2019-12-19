@@ -1,19 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
       <div class="card bg-light">
         <div class="card-body">
         <h1 class="display-4 text-center">Contact</h1>
         <hr>
         <form id="contact_form">
-          <div class="form-group">
-            <label for="i_to">To</label>
-            <input type="email" class="form-control form-control-sm" id="i_to" name="to" placeholder="To" required>
-          </div>
-          <div class="form-group">
-            <label for="i_name">Name</label>
-            <input type="text" class="form-control form-control-sm" id="i_name" name="name" placeholder="Name">
-          </div>
           <div class="form-group">
             <label for="i_email">Email</label>
             <input type="email" class="form-control form-control-sm" id="i_email" name="email" placeholder="Email"
@@ -30,8 +22,8 @@
           <div class="form-group">
             <div id="result"></div>
           </div>
-          <button type="submit" class="btn btn-primary" id="btn_submit">Send</button>
-          <button type="reset" class="btn btn-secondary" id="btn_reset">New</button>
+          <button type="submit" class="btn btn-primary btn-sm" id="btn_submit">Send</button>
+          <button type="reset" class="btn btn-secondary btn-sm" id="btn_reset">New</button>
         </form>
         </div>
       </div>

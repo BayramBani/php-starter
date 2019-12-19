@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Great Vibes';
+  src: local('Great Vibes'), url('GreatVibes-Regular.ttf') format('truetype');
+}
+
+.gv-font{
+  font-family: 'Great Vibes', cursive;
+  font-size: 20px;
+}

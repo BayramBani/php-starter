@@ -35,9 +35,13 @@ if ($source == "local") {
 
 if (isset($_REQUEST['page']) && $_REQUEST['page'] != "") $current_page = $_REQUEST["page"];
 
-if ($current_page == "contact") {
-  $js = '<script src="assets/js/page/contact.js"></script>';
+if (file_exists("assets/css/page/".$current_page.".css")) {
+  $common_css .= "<link rel='stylesheet' href='assets/css/page/{$current_page}.css'>";
 }
+if (file_exists("assets/js/page/".$current_page.".js")) {
+  $common_js .= "<script src='assets/js/page/{$current_page}.js'></script>";
+}
+
 if ($current_page == "login") {
   $body_class = "bg-dark";
   $include_navbar = false;
@@ -58,4 +62,5 @@ if (!isset($_SESSION['username']) && $visibility == "private") {
 }
 
 $page = './core/view/' . $current_page . '.php';
+
 ?>

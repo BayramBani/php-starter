@@ -1,18 +1,42 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Info</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <title>Blank Page</title>
 </head>
 <body>
 
 <div class="container mt-5">
-  <div class="row justify-content-sm-center">
-    <div class="col-sm-6">
-      <h1 class="display-1 text-center">Blank [cdn]</h1>
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="text-center">Session</h5>
+        </div>
+        <div class="card-body">
+          <?php
+          session_start();
+          var_dump($_SESSION)
+          ?>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="text-center">Server</h5>
+        </div>
+        <div class="card-body">
+          <?php
+          var_dump($_SERVER)
+          ?>
+        </div>
+      </div>
     </div>
   </div>
 </div>

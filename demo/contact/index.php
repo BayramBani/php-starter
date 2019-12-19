@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <title>Contact</title>
-  <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 
@@ -17,13 +16,6 @@
         <h1 class="display-3 text-center text-primary">Contact</h1>
         <form id="contact_form">
           <div class="form-group">
-            <label for="i_to">To</label>
-            <input type="email" class="form-control" id="i_to" name="to" placeholder="To" required>
-          </div>
-          <div class="form-group">
-            <label for="i_name">Name</label>
-            <input type="text" class="form-control" id="i_name" name="name" placeholder="Name">
-          </div>
           <div class="form-group">
             <label for="i_email">Email</label>
             <input type="email" class="form-control" id="i_email" name="email" placeholder="Email" required>

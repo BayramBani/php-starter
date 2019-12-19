@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('#btn_submit').html('Sending ...');
     $.ajax({
       //url: './core/task/send_mail.php',
-      url: './core/task/send_mail_phpMailer.php',
+      url: './core/task/send_mail_smtp.php',
       type: 'POST',
       data: $('#contact_form').serialize(),
       success: function (data) {
@@ -19,6 +19,5 @@ $(document).ready(function () {
         $('#btn_submit').html('Send');
       }
     });
-
   });
 });

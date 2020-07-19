@@ -13,6 +13,12 @@
         <li class="nav-item">
           <a class="nav-link <?php if ($current_page == 'contact'){echo 'active';} ?>" href="/contact"> Contact </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link <?php if ($current_page == 'image'){echo 'active';} ?>" href="/image"> Image </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?php if ($current_page == 'font'){echo 'active';} ?>" href="/font"> Font </a>
+        </li>
       </ul>
       <form class="form-inline my-2 my-md-0">
         <?php if(isset($_SESSION['username'])){?>

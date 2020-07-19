@@ -12,6 +12,6 @@ define('SMTP_USER', '');
 define('SMTP_PASS', '');
 
 // MAIL
-define('MAIL_TO', '');
+define('MAIL_TO', 'bayram.bani@gmail.com');
 
 ?>

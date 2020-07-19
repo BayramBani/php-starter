@@ -60,10 +60,8 @@ class App
           $login["msg"] = "Oops! Something went wrong. Please try again later.";
         }
       }
-      // Close statement
       $stmt->closeCursor();
     }
-    // Close connection
     $conn = null;
     return $login;
   }

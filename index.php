@@ -9,7 +9,6 @@ require_once('core/var.php');
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" href="favicon.ico">
   <title>Starter</title>
-  <?php echo $common_css; ?>
   <?php echo $css; ?>
 </head>
 <body class="<?php echo $body_class; ?>">
@@ -34,7 +33,6 @@ require_once('core/var.php');
     include './core/partial/footer.php';
   } ?>
 </footer>
-<?php echo $common_js; ?>
 <?php echo $js; ?>
 </body>
 </html>

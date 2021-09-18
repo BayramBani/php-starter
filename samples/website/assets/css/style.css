@@ -1,0 +1,14 @@
+/* Custom page CSS
+-------------------------------------------------- */
+
+main > .container {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+footer {
+  margin-top: 500px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

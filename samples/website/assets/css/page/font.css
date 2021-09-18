@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Great Vibes';
+  src: local('Great Vibes'), url('/assets/font/GreatVibes-Regular.ttf') format('truetype');
+}
+
+.gv-font{
+  font-family: 'Great Vibes', monospace;
+  font-size: 20px;
+}

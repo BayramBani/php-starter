@@ -34,7 +34,7 @@
         </div>
         <div class="mb-3">
           <label for="content" class="form-label">Content</label>
-          <textarea id="content" name="content" class="form-control form-control-sm" required></textarea>
+          <textarea id="content" name="content" class="form-control form-control-sm" required rows="5"></textarea>
         </div>
         <div class="mb-3">
           <button type="submit" class="btn btn-sm btn-primary">save</button>

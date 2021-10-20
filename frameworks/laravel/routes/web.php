@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\NoteController;
+use App\Http\Resources\NoteResource;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\api\NoteApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +37,13 @@ Route::resource('messages', MessageController::class);
 Route::resource('notes', NoteController::class);
 
 require __DIR__.'/auth.php';
+
+Route::prefix('api')->group(function () {
+  /*Route::get('/notes', function () {
+    return NoteResource::collection(\App\Models\Note::all());
+  });*/
+
+  Route::get('/notes/', [NoteApiController::class, 'index']);
+
+
+});

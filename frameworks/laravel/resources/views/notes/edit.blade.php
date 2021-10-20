@@ -37,7 +37,7 @@
         <div class="mb-3">
           <label for="content" class="form-label">Content</label>
           <textarea id="content" name="content" class="form-control form-control-sm"
-                    required>{{ $note->content }}</textarea>
+                    required rows="5">{{ $note->content }}</textarea>
         </div>
         <div class="mb-3">
           <button type="submit" class="btn btn-sm btn-primary">save</button>
